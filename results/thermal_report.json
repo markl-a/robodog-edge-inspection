@@ -1,0 +1,15 @@
+{
+  "n": 400,
+  "max_pose_shift_px": 10.0,
+  "actionable_cases": 144,
+  "no_registration": {
+    "severity_acc": 0.618,
+    "dT_mae_C": 3.07,
+    "missed_actionable": 91
+  },
+  "registered": {
+    "severity_acc": 0.985,
+    "dT_mae_C": 0.16,
+    "missed_actionable": 3
+  }
+}

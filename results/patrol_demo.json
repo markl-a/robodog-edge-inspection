@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "OK": 5,
+    "NEEDS_REVIEW": 0,
+    "SKIPPED": 1,
+    "battery_left_pct": 92.8
+  },
+  "flush_in_plant_room": {
+    "sent": 0,
+    "failed": 6,
+    "pending": 6
+  },
+  "flush_at_dock": {
+    "sent": 6,
+    "failed": 0,
+    "pending": 0
+  },
+  "results": [
+    {
+      "idempotencyKey": "caee61f8-f894-5699-8f08-56727f1806a1",
+      "robotId": "dog-01",
+      "missionId": "2026-09-28-night",
+      "checkpointId": "B1-PG-01",
+      "kind": "gauge",
+      "status": "OK",
+      "value": 4.207,
+      "unit": "bar",
+      "confidence": 0.963,
+      "detail": {
+        "attempts": 1,
+        "method": "classic"
+      },
+      "capturedAt": "2026-09-28T02:00:40+00:00",
+      "truth": 4.2
+    },
+    {
+      "idempotencyKey": "e9191642-c799-5e65-8c99-6e48a001d1b2",
+      "robotId": "dog-01",
+      "missionId": "2026-09-28-night",
+      "checkpointId": "B1-PG-02",
+      "kind": "gauge",
+      "status": "OK",
+      "value": 3.563,
+      "unit": "bar",
+      "confidence": 0.955,
+      "detail": {
+        "attempts": 1,
+        "method": "classic"
+      },
+      "capturedAt": "2026-09-28T02:01:20+00:00",
+      "truth": 3.6
+    },
+    {
+      "idempotencyKey": "589bcf54-21f2-55cc-8bc1-37239738eb60",
+      "robotId": "dog-01",
+      "missionId": "2026-09-28-night",
+      "checkpointId": "B1-SW-01",
+      "kind": "thermal",
+      "status": "OK",
+      "value": 0.01,
+      "unit": "degC_dT",
+      "confidence": 1.0,
+      "detail": {
+        "severity": "normal",
+        "hottest_phase": "B",
+        "hotspots": {
+          "A": 40.07,
+          "B": 40.09,
+          "C": 40.08
+        },
+        "shift_px": [
+          -4.7,
+          -0.9
+        ]
+      },
+      "capturedAt": "2026-09-28T02:02:00+00:00"
+    },
+    {
+      "idempotencyKey": "35de45d4-65f9-5279-9493-d2a4ef5f373a",
+      "robotId": "dog-01",
+      "missionId": "2026-09-28-night",
+      "checkpointId": "B1-SW-02",
+      "kind": "thermal",
+      "status": "OK",
+      "value": 7.71,
+      "unit": "degC_dT",
+      "confidence": 1.0,
+      "detail": {
+        "severity": "probable",
+        "hottest_phase": "C",
+        "hotspots": {
+          "A": 40.08,
+          "B": 40.1,
+          "C": 47.81
+        },
+        "shift_px": [
+          -3.57,
+          0.7
+        ]
+      },
+      "capturedAt": "2026-09-28T02:02:40+00:00"
+    },
+    {
+      "idempotencyKey": "f7b9ca0e-de4f-5f7b-864b-0cfcca06efc8",
+      "robotId": "dog-01",
+      "missionId": "2026-09-28-night",
+      "checkpointId": "B1-PG-03",
+      "kind": "gauge",
+      "status": "OK",
+      "value": 7.755,
+      "unit": "bar",
+      "confidence": 0.883,
+      "detail": {
+        "attempts": 1,
+        "method": "classic"
+      },
+      "capturedAt": "2026-09-28T02:03:20+00:00",
+      "truth": 7.9
+    },
+    {
+      "idempotencyKey": "87a4b1e4-65f9-59e3-8140-f733f0648bf7",
+      "robotId": "dog-01",
+      "missionId": "2026-09-28-night",
+      "checkpointId": "B1-PG-04",
+      "kind": "gauge",
+      "status": "SKIPPED",
+      "value": null,
+      "unit": null,
+      "confidence": null,
+      "detail": {
+        "reason": "unreachable"
+      },
+      "capturedAt": "2026-09-28T02:04:00+00:00"
+    }
+  ]
+}

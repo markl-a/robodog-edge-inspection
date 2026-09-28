@@ -1,0 +1,21 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install numpy opencv-python-headless httpx pytest onnxruntime
+      - run: pytest -q
+      - name: committed INT8 model still loads and reads a gauge
+        run: |
+          python - <<'PY'
+          import numpy as np, onnxruntime as ort
+          from edge.gauge import dataset, SPEC
+          s = ort.InferenceSession("results/gauge_int8.onnx", providers=["CPUExecutionProvider"])
+          x, y = dataset(200, seed=123, size=96)
+          p = s.run(None, {"image": x.astype(np.float32)[:, None] / 255.0})[0] * SPEC.span
+          mae = float(np.abs(p - y).mean()); print("int8 MAE", mae); assert mae < 0.1
+          PY
